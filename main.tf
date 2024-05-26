@@ -48,7 +48,8 @@ module "iam" {
     {
       effect    = "Allow"
       actions   = ["secretsmanager:GetSecretValue"]
-      resources = ["arn:aws:secretsmanager:${var.aws_region}:${var.aws_account_id}:secret:${var.secret_name}"]
+      resources = ["*"]
+      # resources = ["arn:aws:secretsmanager:${var.aws_region}:${var.aws_account_id}:secret:${var.secret_name}"]
     }
   ]
 }
